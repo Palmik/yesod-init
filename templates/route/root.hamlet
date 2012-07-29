@@ -1,0 +1,15 @@
+$maybe Profile name age <- maybeProfile'
+    <h2>
+        Profile
+    <ul>
+        <li>Your name: #{name}
+        <li>Your age: #{age}
+
+$if hasIdentity'
+    <ul>
+        <li><a href=@{ProfileUpdateR}>Update your profile.
+        <li><a href=@{AuthR LogoutR}>Logout.
+$else
+    <ul>
+        <li><a href=@{AuthR LoginR}>Login.
+

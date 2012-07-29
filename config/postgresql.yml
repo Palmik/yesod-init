@@ -1,0 +1,24 @@
+Default: &defaults
+  user: user    
+  password: password
+  host: localhost
+  port: 5432
+  database: yesod-init
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: yesod-init_test
+  <<: *defaults
+
+Staging:
+  database: yesod-init_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: teach-me
+  poolsize: 100
+  <<: *defaults
